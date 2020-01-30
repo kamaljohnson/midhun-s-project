@@ -11,5 +11,13 @@
         android:id="@+id/search_text"
         android:layout_width="match_parent"
         android:layout_height="50dp"/>
+    <view class="androidx.appcompat.app.AlertController$RecycleListView"
+        android:id="@+id/rv_persons"
+        android:background="@color/colorPrimary"
+        android:layout_below="@id/search_text"
+        android:layout_width="match_parent"
+        android:layout_height="500dp">
+
+    </view>
 
 </RelativeLayout>
