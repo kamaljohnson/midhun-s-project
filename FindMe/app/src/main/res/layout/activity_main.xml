@@ -7,17 +7,28 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:hint="Search"
-        android:id="@+id/search_text"
+        android:hint="Enter Phone number"
+        android:id="@+id/phone_number_text"
         android:layout_width="match_parent"
         android:layout_height="50dp"/>
-    <view class="androidx.appcompat.app.AlertController$RecycleListView"
-        android:id="@+id/rv_persons"
-        android:background="@color/colorPrimary"
-        android:layout_below="@id/search_text"
-        android:layout_width="match_parent"
-        android:layout_height="500dp">
 
-    </view>
+    <Button
+        android:text="Person 1"
+        android:layout_below="@id/phone_number_text"
+        android:id="@+id/person_1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"/>
+    <Button
+        android:text="Person 1"
+        android:layout_below="@id/person_1"
+        android:id="@+id/person_2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"/>
+    <Button
+        android:text="Person 1"
+        android:layout_below="@id/person_2"
+        android:id="@+id/person_3"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"/>
 
 </RelativeLayout>
