@@ -18,43 +18,23 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        readSms()
+
         person_1.setOnClickListener {
-            sendSMS("Hello from Find Me")
+            proceedToPersonInfo("8921816527")
         }
+
         person_2.setOnClickListener {
-            sendSMS("Message sending is working")
+            proceedToPersonInfo("7012162235")
         }
+
         person_3.setOnClickListener {
-            sendSMS("Cool")
+            proceedToPersonInfo("7593809715")
         }
     }
 
-    @SuppressLint("Recycle")
-    private fun readSms() {
-        val cursor: Cursor? = contentResolver.query(Uri.parse("content://sms/inbox"), null, null, null, null)
-        val messageArray = arrayListOf<String>()
-        if (cursor!!.moveToFirst()) { // must check the result to prevent exception
-            do {
-                val msgData: String = cursor.getString(12)
-
-                if(msgData.contains("HELLO", ignoreCase = false)) {
-                    Log.i(TAG, "Msg: $msgData")
-                    messageArray.add(msgData)
-                }
-                // use msgData
-            } while (cursor.moveToNext())
-
-        } else { // empty box, no SMS
-        }
-    }
-
-    private fun sendSMS(msg: String) {
-        val smsManager = SmsManager.getDefault() as SmsManager
-        try {
-            smsManager.sendTextMessage("+91" + phone_number_text.text.toString(), "1",  msg, null, null)
-        } catch (error: Exception) {
-            Log.i(TAG, "msg error: $error")
-        }
+    private fun proceedToPersonInfo(phoneNumber:String) {
+        val intent = Intent(this, PersonInfo::class.java)
+        intent.putExtra("PhoneNumber", phoneNumber)
+        startActivity(intent)
     }
 }

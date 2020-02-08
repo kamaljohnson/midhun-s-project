@@ -13,19 +13,19 @@
         android:layout_height="50dp"/>
 
     <Button
-        android:text="Person 1"
+        android:text="Midhun M"
         android:layout_below="@id/phone_number_text"
         android:id="@+id/person_1"
         android:layout_width="match_parent"
         android:layout_height="100dp"/>
     <Button
-        android:text="Person 1"
+        android:text="AMAR"
         android:layout_below="@id/person_1"
         android:id="@+id/person_2"
         android:layout_width="match_parent"
         android:layout_height="100dp"/>
     <Button
-        android:text="Person 1"
+        android:text="RINTU"
         android:layout_below="@id/person_2"
         android:id="@+id/person_3"
         android:layout_width="match_parent"
