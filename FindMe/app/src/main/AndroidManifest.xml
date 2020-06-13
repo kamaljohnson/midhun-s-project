@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.hipo.findme">
 
     <uses-permission android:name="android.permission.READ_SMS" />
@@ -12,14 +13,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PersonInfo"></activity>
-        <activity android:name=".MainActivity">
+        <activity
+            tools:ignore="LockedOrientationActivity"
+            android:screenOrientation="portrait"
+            android:name=".PersonInfo" />
+        <activity
+            tools:ignore="LockedOrientationActivity"
+            android:screenOrientation="portrait"
+            android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <meta-data
+            tools:ignore="LockedOrientationActivity"
+            android:screenOrientation="portrait"
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAuuOVbZndmpUwd5m6i0wyVFQoC8bi9dsQ"/>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
     </application>
 
 </manifest>

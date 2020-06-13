@@ -1,16 +1,9 @@
 package com.hipo.findme
 
-import android.annotation.SuppressLint
 import android.content.Intent
-import android.database.Cursor
-import android.net.Uri
 import android.os.Bundle
-import android.telephony.SmsManager
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
-import java.lang.Exception
-
 
 const val TAG = "MainActivity"
 class MainActivity : AppCompatActivity() {
